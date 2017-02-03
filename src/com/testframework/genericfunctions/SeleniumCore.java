@@ -10,17 +10,6 @@ import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 
-/**
- * *************************************************************************************
- */
-/*                                                                                      */
- /* Class:   SeleniumCore.                                                               */
- /* Purpose: Extends base AutomationTool Class, for GenericFunctions implementation in   */
- /*          Selenium Core (straight JavaScript manipulation).                           */
- /* Author:  Mark Chatham.                                                               */
-/**
- * *************************************************************************************
- */
 class SeleniumCore extends AutomationTool {
 /////////////////////////////////////////////////////////////////////////////////
 // selenium Object.
@@ -30,13 +19,9 @@ class SeleniumCore extends AutomationTool {
     protected ArrayList alSeleniumWindowArray   = new ArrayList();
     protected ArrayList alXPathNameArray        = new ArrayList();
     protected int       iSeleniumWindow_Counter = 0;*/
-    /**
-     * **********************************************************************************************
-     */
+
     /* Helper Functions.                                                                    */
-    /**
-     * **********************************************************************************************
-     */
+
     protected String getTableRow(String strTable, String strRowNumber) {
         if (selenium.isElementPresent(strTable) == false) {
             return "";
@@ -69,13 +54,8 @@ class SeleniumCore extends AutomationTool {
         return true;
     }
 
-    /**
-     * **********************************************************************************************
-     */
     /* Selenium object Functions.                                                                    */
-    /**
-     * **********************************************************************************************
-     */
+
     public Boolean toolSetup(String strBrowser, String strURL) {
         selenium = new DefaultSelenium("localhost", 4444, strBrowser, strURL);
 
@@ -116,13 +96,9 @@ class SeleniumCore extends AutomationTool {
         return true;
     }
 
-    /**
-     * **********************************************************************************************
-     */
+
     /* Selenium Window Functions.                                                                    */
-    /**
-     * **********************************************************************************************
-     */
+
     public Boolean window_AddWindow() {
         String[] WindowTitles = selenium.getAllWindowTitles();
 
@@ -153,13 +129,8 @@ class SeleniumCore extends AutomationTool {
         return true;
     }
 
-    /**
-     * **********************************************************************************************
-     */
     /* Generic Functions.                                                                            */
-    /**
-     * **********************************************************************************************
-     */
+
 
     public Boolean genfunc_GetAttribute(String strObject, String strValue) {
         if (isElementPresent(strObject) == false) {

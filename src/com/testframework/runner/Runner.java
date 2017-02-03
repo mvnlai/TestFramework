@@ -22,7 +22,7 @@ public class Runner {
     private static HSSFRow row;
     private static ReadXLFile rXLFile;
 
-    private static final String AUTOMATIONCONTROL_PATH = "C:\\Automation\\Subrogation\\AutomationControl.xls";
+    private static final String AUTOMATIONCONTROL_PATH = "";
 
     private static final int AUTOMATIONCONTROL_COMMAND = 0;
     private static final int AUTOMATIONCONTROL_SPREADSHEET = 1;
@@ -50,13 +50,9 @@ public class Runner {
     private static final String AUTOMATIONTOOL_SELENIUMCORE = "SELENIUM_CORE";
     private static final String AUTOMATIONTOOL_SELENIUMRC = "SELENIUM_RC";
     private static final String AUTOMATIONTOOL_SELENIUMWD = "SELENIUM_WD";
-    private static final String AUTOMATIONTOOL_VAADINTESTBENCH = "VAADIN_TESTBENCH";
-    private static final String AUTOMATIONTOOL_ENGINETESTER = "STS_ENGINETESTER";
     private static final String AUTOMATIONTOOL_IOSDRIVER = "IOSDRIVER";
     private static final String AUTOMATIONTOOL_ANDROIDDRIVER = "ANDROIDDRIVER";
 
-    private static final String AUTOMATIONENVIRONMENT_VOX_RESTORE = "VOX_RESTORE";
-    private static final String AUTOMATIONENVIRONMENT_VOX_BACKUP = "VOX_BACKUP";
     private static final String AUTOMATIONENVIRONMENT_START_APPIUM = "START_APPIUM";
     private static final String AUTOMATIONENVIRONMENT_STOP_APPIUM = "STOP_APPIUM";
 
@@ -125,11 +121,9 @@ public class Runner {
         }
     }
 
-    /**
-     * ***********************************************************************************
-     */
-    /* Automation Control Command Functions  
-/**************************************************************************************/
+
+    /* Automation Control Command Functions  */
+
     private static void AutomationControlCommand_RunAutomationScript(String strData) throws Exception {
         shCurrentAutomationScript = rXLFile.LoadSpreadsheet(strData);
         if (shCurrentAutomationScript == null) {
@@ -243,12 +237,6 @@ public class Runner {
             case AUTOMATIONTOOL_SELENIUMCORE:
                 iAutomationTool = 2;
                 break;
-            case AUTOMATIONTOOL_VAADINTESTBENCH:
-                iAutomationTool = 3;
-                break;
-            case AUTOMATIONTOOL_ENGINETESTER:
-                iAutomationTool = 4;
-                break;
             case AUTOMATIONTOOL_IOSDRIVER:
                 iAutomationTool = 5;
                 break;
@@ -293,33 +281,6 @@ public class Runner {
         logOutput.LogStep(1017, strFile, "", null);
 
         switch (strFile) {
-            case AUTOMATIONENVIRONMENT_VOX_RESTORE:
-
-                ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/C", "restore.bat");
-                pb.directory(new File("C:\\automation\\bat\\"));
-
-                File log = new File("C://logr.txt");
-                pb.redirectErrorStream(true);
-                pb.redirectOutput(Redirect.appendTo(log));
-                Process p = pb.start();
-                p.waitFor();
-
-                break;
-
-            case AUTOMATIONENVIRONMENT_VOX_BACKUP:
-
-                ProcessBuilder pbb = new ProcessBuilder("cmd.exe", "/C", "backup.bat");
-                pbb.directory(new File("C:\\automation\\bat\\"));
-
-                File logs = new File("C://logb.txt");
-
-                pbb.redirectErrorStream(true);
-                pbb.redirectOutput(Redirect.appendTo(logs));
-                Process b = pbb.start();
-                b.waitFor();
-                System.out.println("Completed VOX Backup");
-
-                break;
 
             case AUTOMATIONENVIRONMENT_START_APPIUM:
 

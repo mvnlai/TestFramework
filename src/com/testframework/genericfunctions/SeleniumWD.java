@@ -28,17 +28,6 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * *************************************************************************************
- */
-/*                                                                                      */
- /* Class:   SeleniumWD.                                                                 */
- /* Purpose: Extends base AutomationTool Class, for GenericFunctions implementation in   */
- /*          Selenium WebDriver.                                                         */
- /* Author:  Mark Chatham.                                                               */
-/**
- * *************************************************************************************
- */
 class SeleniumWD extends AutomationTool {
 /////////////////////////////////////////////////////////////////////////////////
 // selenium Object.
@@ -48,13 +37,7 @@ class SeleniumWD extends AutomationTool {
     public static org.openqa.selenium.WebElement webElement;
 
 //    public String SavedTxt = "";
-    /**
-     * **********************************************************************************************
-     */
     /* Helper Functions.                                                                             */
-    /**
-     * **********************************************************************************************
-     */
     protected String getTableRow(String strTable, String strRowNumber) {
         return "";
     }
@@ -118,13 +101,8 @@ class SeleniumWD extends AutomationTool {
         return true;
     }
 
-    /**
-     * **********************************************************************************************
-     */
     /* Selenium object Functions.                                                                    */
-    /**
-     * **********************************************************************************************
-     */
+
     public Boolean toolSetup(String strBrowser, String strURL) {
         switch (strBrowser) {
             case "*iexplore": {
@@ -239,13 +217,9 @@ class SeleniumWD extends AutomationTool {
         return true;
     }
 
-    /**
-     * **********************************************************************************************
-     */
+
     /* Selenium Window Functions.                                                                    */
-    /**
-     * **********************************************************************************************
-     */
+
     public Boolean window_AddWindow() {
         String WindowTitles = selenium.getWindowHandle();
 
@@ -279,13 +253,8 @@ class SeleniumWD extends AutomationTool {
         return true;
     }
 
-    /**
-     * **********************************************************************************************
-     */
     /* Generic Functions.                                                                            */
-    /**
-     * **********************************************************************************************
-     */
+
     public Boolean genfunc_SelectWindow(String strWindow) {
         System.out.println(strWindow);
         //System.out.println(String.valueOf(alWindowArray.get(Integer.parseInt(strWindow))));
