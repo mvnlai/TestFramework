@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="dist/lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="dist/lib/poi-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="dist/lib/poi-examples-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="dist/lib/poi-ooxml-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="dist/lib/poi-ooxml-schemas-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="dist/lib/poi-scratchpad-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="dist/lib/selenium-java-2.48.2-srcs.jar"/>
+	<classpathentry kind="lib" path="dist/lib/selenium-java-2.48.2.jar"/>
+	<classpathentry kind="lib" path="dist/lib/selenium-server-standalone-2.48.2.jar"/>
+	<classpathentry kind="lib" path="dist/TestFramework.jar"/>
+	<classpathentry kind="lib" path="lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="lib/poi-examples-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="lib/poi-scratchpad-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-java-2.48.2-srcs.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-java-2.48.2.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-server-standalone-2.48.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
