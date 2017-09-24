@@ -285,7 +285,7 @@ public class Runner {
             case AUTOMATIONENVIRONMENT_START_APPIUM:
 
                 ProcessBuilder pbbb = new ProcessBuilder("cmd.exe", "/C", "runappium.bat");
-                pbbb.directory(new File("C:\\Users\\ukrimlai\\"));
+                pbbb.directory(new File("\\path"));
 
                 File logss = new File("C://logb.txt");
 
