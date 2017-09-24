@@ -266,7 +266,7 @@ public class Runner {
     //windows command only
     public static void AutomationControlCommand_StartServer() throws IOException, InterruptedException {
         String appiumLoc = "re";
-        String appConfig = "--address 127.0.0.1 --port 4723 --app C:\\Users\\ukrimlai\\Downloads\\com.twitter.android-5.74.apk --app-activity com.twitter.android.LoginActivity --app-pkg com.twitter.android --pre-launch --platform-name Android --platform-version 22 --automation-name Appium --device-name \"BH900AVY16\" --log-no-color";
+        String appConfig = "--address 127.0.0.1 --port 4723 --app \\com.twitter.android-5.74.apk --app-activity com.twitter.android.LoginActivity --app-pkg com.twitter.android --pre-launch --platform-name Android --platform-version 22 --automation-name Appium --device-name \"BH900AVY16\" --log-no-color";
 
         logOutput.LogStep(1018, "", "", null);
 
